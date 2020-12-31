@@ -1,0 +1,11 @@
+
+public class ControllerCreate extends Controller {
+	public ControllerCreate(Bank m) {
+		// create the constructor
+		super(m);
+	}
+	
+	public String create(String name, String amount, int type) {
+		
+	}
+}

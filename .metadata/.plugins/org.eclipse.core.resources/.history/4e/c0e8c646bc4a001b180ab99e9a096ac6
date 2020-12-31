@@ -1,0 +1,5 @@
+import javax.swing.JFrame;
+
+public class View<T extends Controller> extends JFrame implements ModelListener {
+
+}

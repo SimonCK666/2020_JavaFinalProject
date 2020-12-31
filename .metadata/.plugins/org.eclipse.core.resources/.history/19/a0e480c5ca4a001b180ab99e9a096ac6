@@ -1,0 +1,8 @@
+
+public class ViewHistory extends View {
+	public ViewHistory(Bank m, ControllerHIstory c) {
+		super(m, c);
+		
+		
+	}
+}

@@ -1,0 +1,16 @@
+import javax.swing.JTextField;
+
+public class ViewWithdraw extends View<ControllerWithdraw> {
+	private JTextField t1;
+	private JTextField t2;
+	
+	public ViewWithdraw(Bank m, ControllerWithdraw c) {
+		// create the constructor
+		super(m, c);
+		
+		// add listener
+		m.addListeners(this);
+		
+		
+	}
+}

@@ -1,0 +1,7 @@
+
+public class Controller {
+	// create the protected variable
+	protected Bank m;
+	
+	
+}

@@ -1,0 +1,55 @@
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class ViewGetMoney extends View<ControllerGetMoney> {
+	private JTextField t;
+	
+	public ViewGetMoney(Bank m, ControllerGetMoney c) {
+		// create the constructor
+		super(m, c);
+		
+		// add listeners
+		m.addListeners(this);
+		
+		// The user can type in the text field t the name of a bank account customer. 
+		t = new JTextField("Type a customer name here");
+		
+		// create a button
+		JButton jb = new JButton("Tell me the money");
+		// add action listener
+		jb.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// using the showMessageDialog method of the JOptionPane class
+				JOptionPane.showMessageDialog(null, c.getMoney(t.getText()));
+			}
+		});
+		
+		this.setTitle("View Get Money");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(400, 300);
+		
+		// use the GridLayout
+		this.setLayout(new GridLayout(2, 0, 0, 0));
+		
+		// add jb and t
+		this.add(jb);
+		this.add(t);
+		
+		this.setVisible(true);
+	}
+	
+	public void update() {
+		/*
+		 * The update method of the ViewGetMoney class does nothing, 
+		 * because the ViewGetMoney class does not graphically display 
+		 *  any data from the bank (the model).
+		 */
+	}
+}

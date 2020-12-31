@@ -1,0 +1,7 @@
+
+public class ControllerCreate extends Controller {
+	public ControllerCreate(Bank m) {
+		// create the contructor
+		super(m);
+	}
+}

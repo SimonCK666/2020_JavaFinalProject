@@ -1,0 +1,83 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+
+public class HIstoryPanel extends JPanel {
+	private Bank m;
+	
+	public HIstoryPanel(Bank m) {
+		// create the constructor
+		this.m = m;
+	}
+	
+	private int historyMax(ArrayList<Integer> hm) {
+		// consider the max is the first one
+		int max = hm.get(0);
+		
+		for(Integer history : hm) {
+			if(history > max) {
+				// change the max to the larger one
+				max = history;
+			}
+			
+		}
+		// return max value
+		return max;
+	}
+	
+	private int historyMin(ArrayList<Integer> h) {
+		int min = h.get(0);
+		
+		for(Integer history : h) {
+			if(history < min) {
+				min = history;
+			}
+		}
+		
+		return min;
+	}
+	
+	private int historyRange(ArrayList<Integer> hr) {
+		// set the range
+		int range = historyMax(hr) - historyMin(hr);
+		
+		if (range < 100) {
+			return 100;
+		} else {
+			return range;
+		}
+		
+		
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		int min = historyMin(m.getHistory());
+		int range = historyRange(m.getHistory());
+		int maxX = getWidth() - 1;
+		int maxY = getHeight() - 1;
+		int zero = maxY + maxY / range;
+		
+		super.paintComponent(g);
+		
+		// set color
+		g.setColor(Color.blue);
+		// draw lines
+		g.drawLine(0, zero, maxX, zero);
+		
+		g.setColor(Color.red);
+		
+		if(m.getHistory().size() > 1) {
+			for (int i = 1; i < m.getHistory().size(); i++) {
+				g.drawLine(10 * (i - 1), zero - m.getHistory().get(i - 1) * maxY / range, 10 * i, zero - m.getHistory().get(i) * maxY / range);
+			
+			}
+			
+		} else {
+			
+		}
+	
+	}
+}

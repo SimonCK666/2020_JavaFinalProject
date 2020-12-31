@@ -1,0 +1,11 @@
+
+public class ControllerWithdraw extends Controller {
+	public ControllerWithdraw(Bank m) {
+		// create constructor
+		super(m);
+	}
+	
+	public String withdraw(String name, String amount) {
+		
+	}
+}

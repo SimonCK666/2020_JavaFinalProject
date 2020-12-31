@@ -1,0 +1,7 @@
+import javax.swing.JTextField;
+
+public class ViewGetMoney extends View<ControllerGetMoney> {
+	private JTextField t;
+	
+	
+}

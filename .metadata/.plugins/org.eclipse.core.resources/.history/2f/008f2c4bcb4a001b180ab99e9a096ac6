@@ -1,0 +1,7 @@
+
+public class ControllerHIstory extends Controller {
+	public ControllerHistory(Bank m) {
+		// create the constructor
+		super(m);
+	}
+}

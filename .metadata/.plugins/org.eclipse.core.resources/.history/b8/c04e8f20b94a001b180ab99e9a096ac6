@@ -1,0 +1,15 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class ViewSimple extends JFrame implements ModelListener {
+	// create the instance variables
+	private Bank m;
+	private ControllerSimple c;
+	private JLabel label;
+	
+	public ViewSimple(Bank m, ControllerSimple c) {
+		// create the constructor
+		m.addListeners(this);
+		
+	}
+}

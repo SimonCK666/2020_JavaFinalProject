@@ -1,0 +1,7 @@
+
+public class ControllerHIstory {
+	public ControllerHistory(Bank m) {
+		
+		super(m);
+	}
+}

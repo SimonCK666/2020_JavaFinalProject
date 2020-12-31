@@ -1,0 +1,6 @@
+
+public class ControllerWithdraw extends Controller {
+	public ControllerWithdraw(Bank m) {
+		
+	}
+}

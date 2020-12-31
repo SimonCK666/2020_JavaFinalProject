@@ -1,0 +1,18 @@
+
+public class ControllerCreate extends Controller {
+	public ControllerCreate(Bank m) {
+		// create the constructor
+		super(m);
+	}
+	
+	public String create(String name, String amount, int type) {
+		if(type == 0) {
+			// if type is zero, then add ccount
+			try {
+				m.addAcount(new CreditAccount(name, Integer.parseInt(amount)));
+			} catch (NumberFormatException e) {
+				
+			}
+		}
+	}
+}

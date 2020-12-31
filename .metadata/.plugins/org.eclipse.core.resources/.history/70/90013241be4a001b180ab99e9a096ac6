@@ -1,0 +1,18 @@
+import javax.swing.JTextField;
+
+public class ViewGetMoney extends View<ControllerGetMoney> {
+	private JTextField t;
+	
+	public ViewGetMoney(Bank m, ControllerGetMoney c) {
+		// create the constructor
+		super(m, c);
+		
+		// add listeners
+		m.addListeners(this);
+		
+		// The user can type in the text field t the name of a bank account customer. 
+		t = new JTextField("Type a customer name here");
+		
+		
+	}
+}

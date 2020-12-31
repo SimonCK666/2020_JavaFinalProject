@@ -1,0 +1,6 @@
+
+public class ControllerCreate extends Controller {
+	public ControllerCreate(Bank m) {
+		
+	}
+}

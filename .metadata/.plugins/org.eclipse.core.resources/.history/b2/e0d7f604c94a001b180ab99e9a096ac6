@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+
+public class HIstoryPanel extends JPanel {
+	private Bank m;
+	
+	public HIstoryPanel(Bank m) {
+		// create the constructor
+		this.m = m;
+	}
+	
+	private int historyMax(ArrayList<Integer> hm) {
+		// consider the max is the first one
+		int max = hm.get(0);
+		
+		for(Integer history : hm) {
+			if(history > max) {
+				// change the max to the larger one
+				max = history;
+			}
+			
+		}
+		// return max value
+		return max;
+	}
+	
+	private int historyMin(ArrayList<Integer> h) {
+		int min = h.get(0);
+		
+		for(Integer history : h) {
+			if(history < min) {
+				min = history;
+			}
+		}
+		
+		return min;
+	}
+	
+	private int historyRange(ArrayList<Integer> hr) {
+		// 
+		int range = historyMax(hr) - historyMin(hr);
+	}
+}

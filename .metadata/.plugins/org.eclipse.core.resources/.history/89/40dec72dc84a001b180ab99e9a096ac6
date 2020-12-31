@@ -1,0 +1,10 @@
+import javax.swing.JPanel;
+
+public class HIstoryPanel extends JPanel {
+	private Bank m;
+	
+	public HIstoryPanel(Bank m) {
+		// create the constructor
+		
+	}
+}

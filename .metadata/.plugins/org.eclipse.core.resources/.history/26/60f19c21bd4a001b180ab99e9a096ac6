@@ -1,0 +1,6 @@
+
+public class ControllerGetMoney extends Controller {
+	public ControllerGetMoney(Bank m) {
+		
+	}
+}

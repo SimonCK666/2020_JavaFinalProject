@@ -1,0 +1,10 @@
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
+public class ViewCreate extends View<ControllerCreate> {
+	private JTextField t1;
+	private JTextField t2;
+	private JComboBox<String> cb;
+	
+	
+}

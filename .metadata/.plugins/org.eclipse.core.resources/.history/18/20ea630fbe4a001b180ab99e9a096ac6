@@ -1,0 +1,10 @@
+import javax.swing.JTextField;
+
+public class ViewGetMoney extends View<ControllerGetMoney> {
+	private JTextField t;
+	
+	public ViewGetMoney(Bank m, ControllerGetMoney c) {
+		// create the constructor
+		
+	}
+}

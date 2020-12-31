@@ -1,0 +1,30 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class ViewGetMoney extends View<ControllerGetMoney> {
+	private JTextField t;
+	
+	public ViewGetMoney(Bank m, ControllerGetMoney c) {
+		// create the constructor
+		super(m, c);
+		
+		// add listeners
+		m.addListeners(this);
+		
+		// The user can type in the text field t the name of a bank account customer. 
+		t = new JTextField("Type a customer name here");
+		
+		// create a button
+		JButton jb = new JButton("Tell me the money");
+		jb.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, c.getMoney(t.getText()));;
+			}
+		});
+	}
+}

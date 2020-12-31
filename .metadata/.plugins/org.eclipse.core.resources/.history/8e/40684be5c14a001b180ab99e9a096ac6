@@ -1,0 +1,8 @@
+import javax.swing.JTextField;
+
+public class ViewWithdraw extends View<ControllerWithdraw> {
+	private JTextField t1;
+	private JTextField t2;
+	
+	
+}

@@ -1,0 +1,28 @@
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
+public class ViewWithdraw extends View<ControllerWithdraw> {
+	private JTextField t1;
+	private JTextField t2;
+	
+	public ViewWithdraw(Bank m, ControllerWithdraw c) {
+		// create the constructor
+		super(m, c);
+		
+		// add listener
+		m.addListeners(this);
+		
+		t1 = new JTextField("Type a customer name here");
+		t2 = new JTextField("Type an amount of money here");
+		
+		// Create the button
+		JButton jb = new JButton("Withdraw");
+		
+		// add action listener
+		jb.addActionListener(new ActionListener() {
+			
+		});
+	}
+}

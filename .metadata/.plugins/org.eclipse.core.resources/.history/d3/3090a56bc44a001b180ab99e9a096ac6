@@ -1,0 +1,6 @@
+
+public class ViewCreate extends View<ControllerCreate> {
+	private JTextField t1;
+	private JTextField t2;
+	
+}

@@ -1,0 +1,11 @@
+
+public class ViewHistory extends View {
+	public ViewHistory(Bank m, ControllerHIstory c) {
+		// create the constructor
+		super(m, c);
+		
+		m.addListeners(this);
+		
+		
+	}
+}

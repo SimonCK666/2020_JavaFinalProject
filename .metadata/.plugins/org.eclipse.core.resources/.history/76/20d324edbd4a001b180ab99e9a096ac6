@@ -1,0 +1,4 @@
+
+public class ViewGetMoney extends View<ControllerGetMoney> {
+
+}

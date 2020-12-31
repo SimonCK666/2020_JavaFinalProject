@@ -1,0 +1,21 @@
+
+public class ControllerGetMoney extends Controller {
+	public ControllerGetMoney(Bank m) {
+		// create the contructor
+		super(m);
+	}
+	
+	/*
+	 * The getMoney method takes the name of a bank customer as argument. 
+	 * The getMoney method of the controller then calls the getMoney method
+	 *  of the bank to get the amount of money currently stored in the bank 
+	 *  account that belongs to that customer.
+	 */
+	
+	public String getMoney(String name) {
+		try {
+			return m.getMoney(name);
+		}
+	}
+}
+

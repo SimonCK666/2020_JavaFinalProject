@@ -1,0 +1,26 @@
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
+public class ViewCreate extends View<ControllerCreate> {
+	private JTextField t1;
+	private JTextField t2;
+	private JComboBox<String> cb;
+	
+	public ViewCreate(Bank m, ControllerCreate c) {
+		// create the constructor
+		super(m, c);
+		
+		// add listener
+		m.addListeners(this);
+		
+		t1 = new JTextField("Type a new customer name here");
+		t2 = new JTextField("Type an amount of money here");
+		
+		cb = new JComboBox<String>();
+		
+		// create a button
+		JButton jb = new JButton("Create");
+		
+	}
+}

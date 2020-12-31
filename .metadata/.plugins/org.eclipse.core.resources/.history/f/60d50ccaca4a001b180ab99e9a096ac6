@@ -1,0 +1,9 @@
+
+public class ViewHistory extends View {
+	public ViewHistory(Bank m, ControllerHIstory c) {
+		// create the costructor
+		super(m, c);
+		
+		
+	}
+}

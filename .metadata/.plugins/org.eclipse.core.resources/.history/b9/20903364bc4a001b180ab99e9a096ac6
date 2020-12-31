@@ -1,0 +1,9 @@
+import javax.swing.JFrame;
+
+public class View<T extends Controller> extends JFrame implements ModelListener {
+	// create the protected variables
+	protected Bank m;
+	protected T c;
+	
+	
+}
